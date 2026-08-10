@@ -10,8 +10,8 @@ interface CtaSectionProps {
 }
 
 export const CtaSection: React.FC<CtaSectionProps> = ({
-  title = "Ready to build something exceptional?",
-  subtitle = "Whether you have a project in mind, a job opportunity, or just want to connect — I'd love to hear from you."
+  title = "Let's build something together.",
+  subtitle = "Interested in working together, discussing an opportunity, or just connecting? I'd love to hear from you."
 }) => {
   return (
     <Section className="bg-gradient-to-b from-muted/50 to-background">
