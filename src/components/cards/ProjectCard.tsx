@@ -11,28 +11,28 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 flex flex-col justify-between hover:border-zinc-700 hover:shadow-lg transition-all duration-200">
+    <div className="group rounded-xl border border-border bg-card p-6 flex flex-col justify-between hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-lg transition-all duration-200">
       <div className="space-y-4">
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <div className="flex gap-1.5 flex-wrap">
             {project.categories.map((cat) => (
-              <span key={cat} className="text-[10px] uppercase tracking-wider font-semibold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">
+              <span key={cat} className="text-[10px] uppercase tracking-wider font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded">
                 {cat}
               </span>
             ))}
           </div>
           {project.featured && (
-            <span className="text-[10px] uppercase tracking-wider font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+            <span className="text-[10px] uppercase tracking-wider font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
               Featured
             </span>
           )}
         </div>
 
         <div>
-          <Link href={`/projects/${project.slug}`} className="block group-hover:text-indigo-400 transition-colors">
-            <h3 className="text-xl font-bold text-zinc-100">{project.title}</h3>
+          <Link href={`/projects/${project.slug}`} className="block group-hover:text-primary transition-colors">
+            <h3 className="text-xl font-bold text-card-foreground">{project.title}</h3>
           </Link>
-          <p className="mt-2 text-sm text-zinc-400 line-clamp-2 leading-relaxed">
+          <p className="mt-2 text-sm text-muted-foreground line-clamp-2 leading-relaxed">
             {project.description}
           </p>
         </div>
@@ -42,18 +42,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <TechBadge key={tech} label={tech} size="sm" />
           ))}
           {project.technologies.length > 5 && (
-            <span className="text-xs text-zinc-500 self-center">+{project.technologies.length - 5}</span>
+            <span className="text-xs text-muted-foreground self-center">+{project.technologies.length - 5}</span>
           )}
         </div>
       </div>
 
-      <div className="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs">
+      <div className="pt-6 mt-6 border-t border-border flex items-center justify-between text-xs">
         {project.githubUrl ? (
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors"
+            className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors"
           >
             <Github className="w-4 h-4" />
             <span>Code</span>
@@ -67,7 +67,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             Live Demo
           </ExternalLink>
         ) : (
-          <Link href={`/projects/${project.slug}`} className="text-indigo-400 hover:text-indigo-300 font-medium">
+          <Link href={`/projects/${project.slug}`} className="text-primary hover:text-primary/80 font-medium">
             View Details →
           </Link>
         )}

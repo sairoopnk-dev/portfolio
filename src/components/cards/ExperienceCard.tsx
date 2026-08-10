@@ -16,13 +16,13 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
     <div className="space-y-4">
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-          <h3 className="text-lg font-bold text-zinc-100">{experience.role}</h3>
-          <span className="text-xs font-mono text-zinc-500">
+          <h3 className="text-lg font-bold text-foreground">{experience.role}</h3>
+          <span className="text-xs font-mono text-muted-foreground">
             {formattedStart} — {formattedEnd}
           </span>
         </div>
 
-        <div className="text-sm font-medium text-indigo-400 mt-0.5">
+        <div className="text-sm font-medium text-primary mt-0.5">
           {experience.companyUrl ? (
             <ExternalLink href={experience.companyUrl} showIcon={false}>
               {experience.company}
@@ -30,14 +30,14 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
           ) : (
             experience.company
           )}
-          <span className="text-zinc-500 font-normal"> · {experience.location}</span>
+          <span className="text-muted-foreground font-normal"> · {experience.location}</span>
         </div>
       </div>
 
-      <ul className="space-y-2 text-sm text-zinc-400 list-disc list-inside">
+      <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
         {experience.description.map((bullet, index) => (
           <li key={index} className="leading-relaxed">
-            <span className="text-zinc-300">{bullet}</span>
+            <span className="text-zinc-700 dark:text-zinc-300">{bullet}</span>
           </li>
         ))}
       </ul>

@@ -16,12 +16,12 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-zinc-800/80 bg-zinc-950 py-12 text-zinc-400 text-sm">
+    <footer className="border-t border-border/80 bg-background py-12 text-muted-foreground text-sm">
       <Container className="space-y-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2">
             <Logo />
-            <p className="text-xs text-zinc-500 max-w-sm">
+            <p className="text-xs text-muted-foreground max-w-sm">
               {siteConfig.description}
             </p>
           </div>
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
           <NavLinks links={navigationData} className="flex-wrap gap-y-2" />
         </div>
 
-        <div className="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           
           <div className="flex items-center space-x-4">
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-zinc-200 transition-colors"
+                className="hover:text-foreground transition-colors"
                 aria-label={social.name}
               >
                 {socialIcons[social.icon] || social.name}

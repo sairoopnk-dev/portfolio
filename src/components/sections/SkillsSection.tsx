@@ -8,7 +8,7 @@ import { skillsData } from '@/data/skills';
 
 export const SkillsSection: React.FC = () => {
   return (
-    <Section className="bg-zinc-900/40 border-y border-zinc-800/80">
+    <Section className="bg-muted/40 border-y border-border/80">
       <Container>
         <SectionHeading
           label="TECH STACK"

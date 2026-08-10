@@ -17,12 +17,12 @@ export const SkillCard: React.FC<SkillCardProps> = ({ category }) => {
   };
 
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 space-y-4 hover:border-zinc-700 transition-colors">
+    <div className="rounded-xl border border-border bg-card p-6 space-y-4 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
       <div className="flex items-center gap-3">
-        <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
+        <div className="p-2 rounded-lg bg-primary/10 text-primary">
           {iconMap[category.icon] || <Code2 className="w-5 h-5" />}
         </div>
-        <h3 className="text-base font-bold text-zinc-100">{category.name}</h3>
+        <h3 className="text-base font-bold text-card-foreground">{category.name}</h3>
       </div>
 
       <div className="space-y-3 pt-2">
@@ -32,7 +32,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ category }) => {
 
           return (
             <div key={tier} className="space-y-1.5">
-              <span className="text-[10px] uppercase tracking-wider font-semibold text-zinc-500 block">
+              <span className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground block">
                 {tier}
               </span>
               <div className="flex flex-wrap gap-1.5">

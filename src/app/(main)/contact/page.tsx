@@ -36,30 +36,30 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-5 space-y-6">
-              <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8 space-y-6">
-                <h3 className="text-xl font-bold text-zinc-100">Contact Details</h3>
+              <div className="rounded-xl border border-border bg-card p-6 sm:p-8 space-y-6">
+                <h3 className="text-xl font-bold text-foreground">Contact Details</h3>
 
                 <div className="space-y-4 text-sm">
                   <div>
-                    <span className="text-xs uppercase font-semibold text-zinc-500 block">Direct Email</span>
-                    <a href="mailto:sairoopnk@example.com" className="text-indigo-400 hover:text-indigo-300 font-medium">
+                    <span className="text-xs uppercase font-semibold text-muted-foreground block">Direct Email</span>
+                    <a href="mailto:sairoopnk@example.com" className="text-primary hover:text-primary/80 font-medium">
                       sairoopnk@example.com
                     </a>
                   </div>
 
                   <div>
-                    <span className="text-xs uppercase font-semibold text-zinc-500 block">Location</span>
-                    <span className="text-zinc-300">{personalData.location}</span>
+                    <span className="text-xs uppercase font-semibold text-muted-foreground block">Location</span>
+                    <span className="text-zinc-700 dark:text-zinc-300">{personalData.location}</span>
                   </div>
 
                   <div>
-                    <span className="text-xs uppercase font-semibold text-zinc-500 block mb-1">Availability</span>
+                    <span className="text-xs uppercase font-semibold text-muted-foreground block mb-1">Availability</span>
                     <StatusBadge status={personalData.availability} />
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-zinc-800 space-y-3">
-                  <span className="text-xs uppercase font-semibold text-zinc-500 block">Connect on Socials</span>
+                <div className="pt-6 border-t border-border space-y-3">
+                  <span className="text-xs uppercase font-semibold text-muted-foreground block">Connect on Socials</span>
                   <div className="flex flex-col space-y-2">
                     {socialLinksData.map((social) => (
                       <a
@@ -67,9 +67,9 @@ export default function ContactPage() {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100 transition-colors p-2 rounded-lg hover:bg-zinc-800/50"
+                        className="inline-flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg hover:bg-accent"
                       >
-                        <span className="text-indigo-400">{socialIcons[social.icon]}</span>
+                        <span className="text-primary">{socialIcons[social.icon]}</span>
                         <span>{social.name}</span>
                       </a>
                     ))}

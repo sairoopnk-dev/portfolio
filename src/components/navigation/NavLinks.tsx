@@ -37,13 +37,13 @@ export const NavLinks: React.FC<NavLinksProps> = ({
             href={link.href}
             onClick={onItemClick}
             className={cn(
-              'text-sm font-medium transition-colors hover:text-zinc-100 relative py-1',
-              isActive ? 'text-zinc-100 font-semibold' : 'text-zinc-400'
+              'text-sm font-medium transition-colors hover:text-foreground relative py-1',
+              isActive ? 'text-foreground font-semibold' : 'text-muted-foreground'
             )}
           >
             {link.label}
             {isActive && orientation === 'horizontal' && (
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 rounded-full" />
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary rounded-full" />
             )}
           </Link>
         );

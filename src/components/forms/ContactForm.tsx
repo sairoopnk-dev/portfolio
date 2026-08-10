@@ -14,8 +14,8 @@ export const ContactForm: React.FC = () => {
   if (submitted) {
     return (
       <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-8 text-center space-y-3">
-        <h3 className="text-xl font-bold text-emerald-400">Message Sent!</h3>
-        <p className="text-sm text-zinc-300">
+        <h3 className="text-xl font-bold text-emerald-600 dark:text-emerald-400">Message Sent!</h3>
+        <p className="text-sm text-muted-foreground">
           Thank you for reaching out. I'll get back to you within 24–48 hours.
         </p>
       </div>
@@ -23,37 +23,37 @@ export const ContactForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-border bg-card p-6 sm:p-8">
       <div className="space-y-2">
-        <label className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Your Name *</label>
+        <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Your Name *</label>
         <input
           type="text"
           required
           placeholder="John Doe"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full rounded-md border border-zinc-800 bg-zinc-950 px-3.5 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:border-indigo-500 focus:outline-none transition-colors"
+          className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none transition-colors"
         />
       </div>
 
       <div className="space-y-2">
-        <label className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Email Address *</label>
+        <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Email Address *</label>
         <input
           type="email"
           required
           placeholder="john@example.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full rounded-md border border-zinc-800 bg-zinc-950 px-3.5 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:border-indigo-500 focus:outline-none transition-colors"
+          className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none transition-colors"
         />
       </div>
 
       <div className="space-y-2">
-        <label className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Subject</label>
+        <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Subject</label>
         <select
           value={formData.subject}
           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-          className="w-full rounded-md border border-zinc-800 bg-zinc-950 px-3.5 py-2.5 text-sm text-zinc-100 focus:border-indigo-500 focus:outline-none transition-colors"
+          className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none transition-colors"
         >
           <option value="Job Opportunity">Job Opportunity</option>
           <option value="Project Collaboration">Project Collaboration</option>
@@ -62,25 +62,25 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div className="space-y-2">
-        <label className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Your Message *</label>
+        <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Your Message *</label>
         <textarea
           required
           rows={5}
           placeholder="Tell me about your project or opportunity..."
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full rounded-md border border-zinc-800 bg-zinc-950 px-3.5 py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:border-indigo-500 focus:outline-none transition-colors resize-y"
+          className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none transition-colors resize-y"
         />
       </div>
 
       <button
         type="submit"
-        className="w-full rounded-md bg-indigo-600 hover:bg-indigo-500 py-3 text-sm font-semibold text-white transition-colors shadow-md"
+        className="w-full rounded-md bg-primary hover:bg-primary/90 py-3 text-sm font-semibold text-primary-foreground transition-colors shadow-md"
       >
         Send Message →
       </button>
 
-      <p className="text-center text-xs text-zinc-500 pt-1">
+      <p className="text-center text-xs text-muted-foreground pt-1">
         Usually replies within 24–48 hours
       </p>
     </form>

@@ -10,7 +10,7 @@ export const ThemeToggle: React.FC = () => {
   const mounted = useMounted();
 
   if (!mounted) {
-    return <div className="w-9 h-9 rounded-md bg-zinc-800/50" />;
+    return <div className="w-9 h-9 rounded-md bg-secondary" />;
   }
 
   const isDark = theme === 'dark';
@@ -18,7 +18,7 @@ export const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="p-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/60 transition-colors"
+      className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
       aria-label="Toggle theme"
     >
       {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}

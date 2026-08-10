@@ -23,32 +23,32 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 top-16 z-40 bg-zinc-950/95 backdrop-blur-md md:hidden flex flex-col justify-between p-6 border-b border-zinc-800">
+    <div className="fixed inset-0 top-16 z-40 bg-background/95 backdrop-blur-md md:hidden flex flex-col justify-between p-6 border-b border-border">
       <div className="space-y-6 pt-4">
         <NavLinks
           links={navigationData}
           orientation="vertical"
           onItemClick={onClose}
         />
-        <div className="pt-4 border-t border-zinc-800">
+        <div className="pt-4 border-t border-border">
           <Link
             href="/contact"
             onClick={onClose}
-            className="w-full inline-flex justify-center items-center px-4 py-2.5 rounded-md bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-colors"
+            className="w-full inline-flex justify-center items-center px-4 py-2.5 rounded-md bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-sm transition-colors"
           >
             Get In Touch
           </Link>
         </div>
       </div>
 
-      <div className="flex items-center justify-around border-t border-zinc-800 pt-6">
+      <div className="flex items-center justify-around border-t border-border pt-6">
         {socialLinksData.map((social) => (
           <a
             key={social.name}
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-zinc-100 transition-colors p-2"
+            className="text-muted-foreground hover:text-foreground transition-colors p-2"
             aria-label={social.name}
           >
             {socialIcons[social.icon] || social.name}

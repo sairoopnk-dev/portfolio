@@ -19,15 +19,15 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   return (
     <div className={cn('space-y-3 mb-10 md:mb-12', align === 'center' ? 'text-center mx-auto max-w-2xl' : 'max-w-3xl', className)}>
       {label && (
-        <span className="text-xs font-semibold tracking-wider uppercase text-indigo-400">
+        <span className="text-xs font-semibold tracking-wider uppercase text-primary">
           {label}
         </span>
       )}
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-100">
+      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-base text-zinc-400 font-normal leading-relaxed">
+        <p className="text-base text-muted-foreground font-normal leading-relaxed">
           {subtitle}
         </p>
       )}

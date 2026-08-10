@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-16 flex items-center',
         scrolled
-          ? 'bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/80 shadow-sm'
+          ? 'bg-background/80 backdrop-blur-md border-b border-border shadow-sm'
           : 'bg-transparent'
       )}
     >
@@ -37,11 +37,11 @@ export const Navbar: React.FC = () => {
 
         <div className="hidden md:flex items-center space-x-6">
           <NavLinks links={navigationData} />
-          <div className="h-4 w-px bg-zinc-800" />
+          <div className="h-4 w-px bg-border" />
           <ThemeToggle />
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium rounded-md bg-indigo-600 hover:bg-indigo-500 text-white transition-colors"
+            className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium rounded-md bg-primary hover:bg-primary/90 text-primary-foreground transition-colors"
           >
             Contact Me
           </Link>
@@ -51,7 +51,7 @@ export const Navbar: React.FC = () => {
           <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-zinc-400 hover:text-zinc-100 transition-colors"
+            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

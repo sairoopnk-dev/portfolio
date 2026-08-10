@@ -23,7 +23,7 @@ export default function AboutPage() {
       <Section>
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-8 space-y-6 text-zinc-300 text-base sm:text-lg leading-relaxed">
+            <div className="lg:col-span-8 space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed">
               <SectionHeading
                 label="BIOGRAPHY"
                 title="Building software with structural elegance and AI precision"
@@ -33,20 +33,20 @@ export default function AboutPage() {
               ))}
             </div>
 
-            <div className="lg:col-span-4 rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 space-y-4">
-              <h3 className="text-base font-bold text-zinc-100 border-b border-zinc-800 pb-3">Quick Info</h3>
+            <div className="lg:col-span-4 rounded-xl border border-border bg-card p-6 space-y-4">
+              <h3 className="text-base font-bold text-foreground border-b border-border pb-3">Quick Info</h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <span className="text-zinc-500 block text-xs">Location</span>
-                  <span className="text-zinc-200 font-medium">{personalData.location}</span>
+                  <span className="text-muted-foreground block text-xs">Location</span>
+                  <span className="text-foreground font-medium">{personalData.location}</span>
                 </div>
                 <div>
-                  <span className="text-zinc-500 block text-xs">Role Focus</span>
-                  <span className="text-zinc-200 font-medium">{personalData.role}</span>
+                  <span className="text-muted-foreground block text-xs">Role Focus</span>
+                  <span className="text-foreground font-medium">{personalData.role}</span>
                 </div>
                 <div>
-                  <span className="text-zinc-500 block text-xs">Availability</span>
-                  <span className="text-emerald-400 font-medium">Open to opportunities</span>
+                  <span className="text-muted-foreground block text-xs">Availability</span>
+                  <span className="text-emerald-600 dark:text-emerald-400 font-medium">Open to opportunities</span>
                 </div>
               </div>
             </div>

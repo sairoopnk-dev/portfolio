@@ -8,14 +8,14 @@ interface PageHeaderProps {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle }) => {
   return (
-    <div className="pt-28 pb-12 bg-zinc-900/50 border-b border-zinc-800/80">
+    <div className="pt-28 pb-12 bg-muted/50 border-b border-border/80">
       <Container>
         <div className="max-w-3xl space-y-3">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-100">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground font-normal leading-relaxed">
               {subtitle}
             </p>
           )}
