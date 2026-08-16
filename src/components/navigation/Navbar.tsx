@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Container } from '../layout/Container';
-import { Logo } from '../common/Logo';
 import { NavLinks } from './NavLinks';
 import { ThemeToggle } from '../common/ThemeToggle';
 import { MobileMenu } from './MobileMenu';
@@ -32,8 +31,6 @@ export const Navbar: React.FC = () => {
       )}
     >
       <Container className="flex items-center justify-between">
-        <Logo />
-
         <div className="hidden md:flex items-center space-x-6">
           <NavLinks links={navigationData} />
           <div className="h-4 w-px bg-border" />

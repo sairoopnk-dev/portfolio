@@ -5,6 +5,7 @@ import { ContactForm } from '@/components/forms/ContactForm';
 import { StatusBadge } from '@/components/common/StatusBadge';
 import { personalData } from '@/data/personal';
 import { socialLinksData } from '@/data/social-links';
+import { siteConfig } from '@/data/site-config';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Metadata } from 'next';
 
@@ -42,8 +43,8 @@ export default function ContactPage() {
                 <div className="space-y-4 text-sm">
                   <div>
                     <span className="text-xs uppercase font-semibold text-muted-foreground block">Direct Email</span>
-                    <a href="mailto:sairoopnk@example.com" className="text-primary hover:text-primary/80 font-medium">
-                      sairoopnk@example.com
+                    <a href={`mailto:${siteConfig.contact.email}`} className="text-primary hover:text-primary/80 font-medium">
+                      {siteConfig.contact.email}
                     </a>
                   </div>
 

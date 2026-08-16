@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { siteConfig } from '@/data/site-config';
+import { SairoopAI } from '@/components/ai/SairoopAI';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
+          <SairoopAI />
         </ThemeProvider>
       </body>
     </html>

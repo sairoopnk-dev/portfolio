@@ -1,24 +1,25 @@
 import { SocialLink } from '@/types';
+import { siteConfig } from './site-config';
 
 export const socialLinksData: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/sairoopnk",
+    url: siteConfig.links.github,
     icon: "Github"
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/sairoopnk",
+    url: siteConfig.links.linkedin,
     icon: "Linkedin"
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/sairoopnk",
+    url: siteConfig.links.twitter || "https://twitter.com/sairoopnk",
     icon: "Twitter"
   },
   {
     name: "Email",
-    url: "mailto:sairoopnk@example.com",
+    url: `mailto:${siteConfig.contact.email}`,
     icon: "Mail"
   }
 ];

@@ -5,12 +5,12 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ogImage: "/og-image.png",
   links: {
-    github: "", // To be filled
-    linkedin: "", // To be filled
+    github: "https://github.com/sairoopnk-dev",
+    linkedin: "https://www.linkedin.com/in/sairoop-nk-77ba683b8/",
     twitter: "", // To be filled
   },
   contact: {
-    email: "", // To be filled
+    email: "sairoopnk@gmail.com",
   },
 };
 
