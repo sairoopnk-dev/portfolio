@@ -1,4 +1,4 @@
-export type AvailabilityStatus = 'available' | 'unavailable' | 'busy';
+export type AvailabilityStatus = 'available' | 'unavailable' | 'busy' | 'Open to internship and software development opportunities';
 
 export interface SocialLink {
   name: string;

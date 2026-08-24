@@ -37,8 +37,8 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({
     }
   };
 
-  const config = statusConfig[status] || statusConfig.available;
-  const displayLabel = label || config.defaultLabel;
+  const config = statusConfig[status as keyof typeof statusConfig] || statusConfig.available;
+  const displayLabel = label || (status in statusConfig ? statusConfig[status as keyof typeof statusConfig].defaultLabel : status);
 
   return (
     <span

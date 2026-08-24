@@ -7,10 +7,12 @@ export const skillsData: SkillCategory[] = [
     icon: "Code2",
     skills: [
       { name: "Python", tier: "primary" },
-      { name: "TypeScript", tier: "primary" },
+      { name: "Java", tier: "primary" },
+      { name: "C++", tier: "primary" },
       { name: "JavaScript", tier: "primary" },
-      { name: "SQL", tier: "proficient" },
-      { name: "HTML5/CSS3", tier: "primary" }
+      { name: "TypeScript", tier: "primary" },
+      { name: "HTML", tier: "primary" },
+      { name: "CSS", tier: "primary" }
     ]
   },
   {
@@ -19,22 +21,10 @@ export const skillsData: SkillCategory[] = [
     icon: "Layout",
     skills: [
       { name: "React", tier: "primary" },
-      { name: "Next.js (App Router)", tier: "primary" },
+      { name: "Next.js", tier: "primary" },
       { name: "Tailwind CSS", tier: "primary" },
-      { name: "Framer Motion", tier: "proficient" },
-      { name: "Redux Toolkit", tier: "proficient" }
-    ]
-  },
-  {
-    id: "backend",
-    name: "Backend & Databases",
-    icon: "Server",
-    skills: [
-      { name: "Node.js / Express", tier: "primary" },
-      { name: "FastAPI / Python", tier: "primary" },
-      { name: "PostgreSQL", tier: "primary" },
-      { name: "MongoDB", tier: "proficient" },
-      { name: "Redis", tier: "proficient" }
+      { name: "shadcn/ui", tier: "primary" },
+      { name: "Framer Motion", tier: "primary" }
     ]
   },
   {
@@ -42,23 +32,24 @@ export const skillsData: SkillCategory[] = [
     name: "AI & Machine Learning",
     icon: "Brain",
     skills: [
-      { name: "PyTorch", tier: "primary" },
-      { name: "LangChain", tier: "primary" },
-      { name: "OpenAI APIs", tier: "primary" },
-      { name: "Vector Databases", tier: "proficient" },
-      { name: "Hugging Face", tier: "familiar" }
+      { name: "Generative AI", tier: "primary" },
+      { name: "LLM Integration", tier: "primary" },
+      { name: "Gemini API", tier: "primary" },
+      { name: "Prompt Engineering", tier: "primary" },
+      { name: "AI Application Development", tier: "primary" }
     ]
   },
   {
     id: "devops-tools",
-    name: "DevOps & Tools",
+    name: "Tools",
     icon: "Wrench",
     skills: [
-      { name: "Git & GitHub", tier: "primary" },
-      { name: "Docker", tier: "proficient" },
+      { name: "Git", tier: "primary" },
+      { name: "GitHub", tier: "primary" },
+      { name: "VS Code", tier: "primary" },
+      { name: "npm", tier: "primary" },
       { name: "Vercel", tier: "primary" },
-      { name: "VS Code / Postman", tier: "primary" },
-      { name: "AWS Basics", tier: "familiar" }
+      { name: "Chrome DevTools", tier: "primary" }
     ]
   }
 ];

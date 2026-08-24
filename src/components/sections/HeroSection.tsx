@@ -76,9 +76,17 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <AnimatedContainer delay={0.2} className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-border bg-card p-2 shadow-2xl relative overflow-hidden flex items-center justify-center">
-                <div className="w-full h-full rounded-full bg-gradient-to-tr from-indigo-500/20 to-emerald-500/20 flex items-center justify-center text-4xl font-bold text-primary border border-border/50">
-                  SNK
-                </div>
+                {personalData.avatarUrl ? (
+                  <img
+                    src={personalData.avatarUrl}
+                    alt={personalData.name}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                ) : (
+                  <div className="w-full h-full rounded-full bg-gradient-to-tr from-indigo-500/20 to-emerald-500/20 flex items-center justify-center text-4xl font-bold text-primary border border-border/50">
+                    SNK
+                  </div>
+                )}
               </div>
             </AnimatedContainer>
           </div>
